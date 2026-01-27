@@ -1,0 +1,30 @@
+<mvc:View
+    controllerName="com.logaligroup.invoice.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <Panel
+        headerText="{i18n>helloPanel}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+    >    <Button
+            text="{i18n>helloDialogBut}"
+            class="sapUiSmallMarginBeginEnd"
+            press="onOpenDialog"
+        />
+        <Button
+            text="{i18n>showHelloButtonText}"
+            class="sapUiSmallMarginEnd"
+            press="onShowMessage"
+        />
+        <Input
+            value="{view>/recipient/name}"
+            width="60%"
+            class="sapUiSmallMarginEnd"
+        />
+        <Text
+            text="Hello {view>/recipient/name}"
+            class="boldElements"
+        />
+    </Panel>
+</mvc:View>

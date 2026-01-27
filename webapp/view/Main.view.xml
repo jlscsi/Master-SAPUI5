@@ -1,18 +1,20 @@
 <mvc:View
     controllerName="com.logaligroup.invoice.controller.Main"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
 >
     <Page title="{i18n>title}">
         <customHeader />
         <content>
-            <Panel headerText="{i18n>helloPanel}">
-                <Button
-                    text="{i18n>showHelloButtonText}"
-                    press="onShowMessage"
-                />
-                <Input value="{view>/recipient/name}"></Input>
-            </Panel>
+            <mvc:XMLView
+                viewName="com.logaligroup.invoice.view.HelloPanel"
+                type="XML"
+            />
+            <core:Fragment 
+                    id="form01"
+                    fragmentName="com.logaligroup.invoice.fragment.Form01"
+                    type="XML"/>
         </content>
     </Page>
 </mvc:View>
