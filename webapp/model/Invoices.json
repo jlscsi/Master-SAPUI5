@@ -1,0 +1,404 @@
+{
+    "Invoices": [
+        {
+            "ProductName": "Wireless Mouse",
+            "Quantity": 15,
+            "ExtendedPrice": 299.85,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-04T00:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Mechanical Keyboard",
+            "Quantity": 5,
+            "ExtendedPrice": 449.95,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-05T09:30:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Monitor 24' LED",
+            "Quantity": 2,
+            "unit_price": 380.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-06T14:20:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "USB-C Hub",
+            "Quantity": 20,
+            "ExtendedPrice": 700.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-07T11:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Webcam HD",
+            "Quantity": 10,
+            "ExtendedPrice": 550.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-10-08T08:15:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Laptop Stand",
+            "Quantity": 8,
+            "ExtendedPrice": 240.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-09T12:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Noise Cancelling Headphones",
+            "Quantity": 4,
+            "ExtendedPrice": 1199.96,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-10T16:45:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "External SSD 1TB",
+            "Quantity": 6,
+            "ExtendedPrice": 720.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-11T10:30:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Graphic Tablet",
+            "Quantity": 3,
+            "ExtendedPrice": 899.97,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-12T09:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Desk Lamp Smart",
+            "Quantity": 12,
+            "ExtendedPrice": 420.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-10-13T15:20:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Microphone Condenser",
+            "Quantity": 7,
+            "ExtendedPrice": 1050.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-14T11:10:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Gaming Chair",
+            "Quantity": 1,
+            "ExtendedPrice": 350.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-15T13:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Office Desk",
+            "Quantity": 2,
+            "ExtendedPrice": 600.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-16T10:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Power Bank 20k mAh",
+            "Quantity": 25,
+            "ExtendedPrice": 1250.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-17T08:45:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Bluetooth Speaker",
+            "Quantity": 14,
+            "ExtendedPrice": 980.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-10-18T17:30:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Ethernet Cable 10m",
+            "Quantity": 50,
+            "ExtendedPrice": 500.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-19T09:15:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "HDMI Switch",
+            "Quantity": 18,
+            "ExtendedPrice": 450.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-20T14:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Smartwatch Series 7",
+            "Quantity": 4,
+            "ExtendedPrice": 1600.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-21T11:45:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Phone Case Silicon",
+            "Quantity": 100,
+            "ExtendedPrice": 1500.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-10-22T10:20:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Screen Protector",
+            "Quantity": 200,
+            "ExtendedPrice": 1000.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-23T15:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Printer Laser",
+            "Quantity": 2,
+            "ExtendedPrice": 500.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-24T08:30:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Cartridge Black Ink",
+            "Quantity": 10,
+            "ExtendedPrice": 300.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-25T12:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Paper Pack A4",
+            "Quantity": 40,
+            "ExtendedPrice": 200.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-26T09:50:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Router WiFi 6",
+            "Quantity": 6,
+            "ExtendedPrice": 1080.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-10-27T13:20:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "VR Headset",
+            "Quantity": 2,
+            "ExtendedPrice": 900.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-28T10:10:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "DDR4 RAM 16GB",
+            "Quantity": 12,
+            "ExtendedPrice": 1440.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-10-29T16:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Internal HDD 4TB",
+            "Quantity": 5,
+            "ExtendedPrice": 600.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-10-30T11:30:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "CPU Cooler",
+            "Quantity": 8,
+            "ExtendedPrice": 480.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-10-31T09:40:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Power Supply 750W",
+            "Quantity": 4,
+            "ExtendedPrice": 520.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-01T14:50:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "GPU RTX 4060",
+            "Quantity": 2,
+            "ExtendedPrice": 800.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-02T10:00:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Motherboard B550",
+            "Quantity": 3,
+            "ExtendedPrice": 450.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-11-03T12:20:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "PC Case Mid-Tower",
+            "Quantity": 5,
+            "ExtendedPrice": 550.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-11-04T13:45:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Case Fan RGB",
+            "Quantity": 24,
+            "ExtendedPrice": 360.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-05T08:10:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Thermal Paste",
+            "Quantity": 30,
+            "ExtendedPrice": 240.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-06T15:30:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Soundbar 2.1",
+            "Quantity": 4,
+            "ExtendedPrice": 800.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-11-07T11:15:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Projector 4K",
+            "Quantity": 1,
+            "ExtendedPrice": 1200.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-11-08T10:40:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Backpack Laptop 15'",
+            "Quantity": 10,
+            "ExtendedPrice": 450.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-09T09:25:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Travel Adapter",
+            "Quantity": 40,
+            "ExtendedPrice": 600.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-10T14:50:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Electric Desk",
+            "Quantity": 1,
+            "ExtendedPrice": 450.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-11-11T12:10:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Monitor Arm",
+            "Quantity": 6,
+            "ExtendedPrice": 360.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-11-12T16:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Security Camera",
+            "Quantity": 5,
+            "ExtendedPrice": 750.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-13T10:30:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Smart Plug",
+            "Quantity": 20,
+            "ExtendedPrice": 300.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-14T11:45:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Smart Bulb RGB",
+            "Quantity": 35,
+            "ExtendedPrice": 525.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-11-15T08:20:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "USB Flash Drive 128GB",
+            "Quantity": 50,
+            "ExtendedPrice": 750.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-11-16T14:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Drawing Pen Nibs",
+            "Quantity": 100,
+            "ExtendedPrice": 100.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-17T09:10:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Anti-Static Mat",
+            "Quantity": 3,
+            "ExtendedPrice": 90.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-18T10:55:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Digital Scales",
+            "Quantity": 7,
+            "ExtendedPrice": 175.00,
+            "ShipperName": "FedEx",
+            "ShipperDate": "2025-11-19T13:40:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Label Maker",
+            "Quantity": 4,
+            "ExtendedPrice": 240.00,
+            "ShipperName": "UPS",
+            "ShipperDate": "2025-11-20T11:00:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Paper Shredder",
+            "Quantity": 2,
+            "ExtendedPrice": 180.00,
+            "ShipperName": "DHL",
+            "ShipperDate": "2025-11-21T15:20:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Vertical Mouse",
+            "Quantity": 8,
+            "ExtendedPrice": 400.00,
+            "ShipperName": "Amazon Logistics",
+            "ShipperDate": "2025-11-22T08:45:00",
+            "Status": "B"
+        }
+    ]
+}
