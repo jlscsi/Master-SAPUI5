@@ -14,6 +14,15 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.20.1",
       "toolsId": "efafa672-c00d-4021-9d83-7144b7d5ef9a"
+    },
+    "dataSources": {
+      "northwind_srv":{
+        "type": "OData",
+        "uri": "/v2/northwind/northwind.svc",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -55,6 +64,9 @@
       "invoices":{
         "type":"sap.ui.model.json.JSONModel",
         "uri":"model/Invoices.json"
+      },
+      "northwind":{
+        "dataSource": "northwind_srv"
       }
     },
     "resources": {

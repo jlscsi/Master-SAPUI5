@@ -19,7 +19,7 @@
         {
             "ProductName": "Monitor 24' LED",
             "Quantity": 2,
-            "unit_price": 380.00,
+            "ExtendedPrice": 380.00,
             "ShipperName": "DHL",
             "ShipperDate": "2025-10-06T14:20:00",
             "Status": "C"
@@ -76,7 +76,7 @@
             "ProductName": "Desk Lamp Smart",
             "Quantity": 12,
             "ExtendedPrice": 420.00,
-            "ShipperName": "Amazon Logistics",
+            "ShipperName": "Speedy Logistics",
             "ShipperDate": "2025-10-13T15:20:00",
             "Status": "B"
         },
@@ -92,7 +92,7 @@
             "ProductName": "Gaming Chair",
             "Quantity": 1,
             "ExtendedPrice": 350.00,
-            "ShipperName": "FedEx",
+            "ShipperName": "Speedy Logistics",
             "ShipperDate": "2025-10-15T13:00:00",
             "Status": "A"
         },

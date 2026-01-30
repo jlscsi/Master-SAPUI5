@@ -1,15 +1,86 @@
-<core:FragmentDefinition xmlns:form="sap.ui.layout.form" 
+<core:FragmentDefinition
+    xmlns:form="sap.ui.layout.form"
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-        <Panel headerText="{i18n>panelFrTitle}"
-                class="sapUiResponsiveMargin"
-                width="50%">
-            <content>
-                <form:SimpleForm id="simpleForm" editable="true">
-                  <Label  text="{i18n>labelname}" ></Label>   
-                  <Input ></Input>
-                </form:SimpleForm>        
-        
-            </content>
-        </Panel>
+    xmlns:core="sap.ui.core"
+>
+    <Panel
+        headerText="{i18n>panelFrTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+    >
+        <content>
+            <form:SimpleForm
+                id="simpleForm"
+                editable="true"
+                width="80%"
+                layout="ResponsiveGridLayout"
+            >
+                <Label text="{i18n>labelname}" />
+                <Input
+                    placeholder="Ingrese su Nombre"
+                    required="true"
+                />
+                <Label text="{i18n>labelapellido}" />
+                <Input
+                    placeholder="Ingrese su Apellido"
+                    required="true"
+                />
+                <Label text="{i18n>labelfechanacimiento}" />
+                <DatePicker
+                    id="dpFecha"
+                    placeholder="Ingrese una fecha"
+                    displayFormat="dd/MM/yyyy"
+                    valueFormat="yyyy-MM-dd"
+                    required="true"
+                />
+                <Label text="{i18n>labelestadocivil}" />
+                <Select
+                    id="selEstadoCivil"
+                    selectedKey=""
+                    required="true"
+                >
+                    <items>
+                        <core:Item
+                            key=""
+                            text="Seleccione estado civil"
+                        />
+                        <core:Item
+                            key="S"
+                            text="Soltero"
+                        />
+                        <core:Item
+                            key="C"
+                            text="Casado"
+                        />
+                    </items>
+                </Select>
+                <Label text="{i18n>labelnotas}" />
+                <HBox
+                    width="100%"
+                    alignItems="Center"
+                    justifyContent="Start"
+                    class="sapUiTinyMarginTop"
+                >
+                    <TextArea
+                        id="txtNotas"
+                        placeholder="Ingrese notas"
+                        rows="4"
+                        width="100%"
+                    >
+                        <layoutData>
+                            <FlexItemData growFactor="1" />
+                        </layoutData>
+                    </TextArea>
+
+                    <Button
+                        icon="sap-icon://paper-plane"
+                        text=""
+                        press="onEnviar"
+                        class="sapUiTinyMarginBegin"
+                        width="20px"
+                    />
+                </HBox>
+            </form:SimpleForm>
+        </content>
+    </Panel>
 </core:FragmentDefinition>
