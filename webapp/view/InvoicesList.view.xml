@@ -4,9 +4,9 @@
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
 >
-    <!--items="{invoices>/Invoices}" seria de esta forma si no se quiere agrupar es decir group by pero si se quiere agrupar se con path
+    <!--items="{northwind>/Invoices}" seria de esta forma si no se quiere agrupar es decir group by pero si se quiere agrupar se con path
         items="{
-                 path: 'invoices>/Invoices',
+                 path: 'northwind>/Invoices',
                  sorter: {
                             path:'ShipperName',
                             group:true
@@ -19,7 +19,7 @@
         headerText="{i18n>invoices}"
         class="sapUiResponsiveMargin"
         items="{
-                 path:'invoices>/Invoices',
+                 path:'northwind>/Invoices',
                  sorter:[{
                     path:'ShipperName',
                     group:true
@@ -59,34 +59,36 @@
 
         <items>
             <ObjectListItem
-                title="{invoices>Quantity} x {invoices>ProductName}"
+                title="{northwind>Quantity} x {northwind>ProductName}"
+                type="Navigation"
+                press="onNavToDetail"
                 number="{
-                        parts:['invoices>ExtendedPrice',
+                        parts:['northwind>ExtendedPrice',
                                'currency>/usd'],
                                type:'sap.ui.model.type.Currency',
                                formatOptions:{
-                                  showMeasure: true 
-
+                                  showMeasure: true,
+                                  locale:'es-ES'
                                }
                         }"
                 numberUnit="{currency>/usd}"
                 numberState="{= 
-                 (${invoices>ExtendedPrice} >=100 &amp;&amp; ${invoices>ExtendedPrice} &lt;=300? 'Error':
-                 (${invoices>ExtendedPrice} >300 &amp;&amp; ${invoices>ExtendedPrice} &lt;=500? 'Warning':
-                 (${invoices>ExtendedPrice} >500 &amp;&amp; ${invoices>ExtendedPrice} &lt;=1000? 'Success':'Information'))) }"
+                 (${northwind>ExtendedPrice} >=100 &amp;&amp; ${northwind>ExtendedPrice} &lt;=300? 'Error':
+                 (${northwind>ExtendedPrice} >300 &amp;&amp; ${northwind>ExtendedPrice} &lt;=500? 'Warning':
+                 (${northwind>ExtendedPrice} >500 &amp;&amp; ${northwind>ExtendedPrice} &lt;=1000? 'Success':'Information'))) }"
             >
-                <!--La linea de abajo es para formatter y en este caso es de New, In progress, Done-->
-                <firstStatus>
+                <!-- La linea de abajo es para formatter y en este caso es de New, In progress, Done-->
+                <!-- <firstStatus>
                     <ObjectStatus
                         core:require="{
                             MyFormatter: 'com/logaligroup/invoice/model/formatter'
                    }"
                         text="{
-                   path:'invoices>Status',
+                   path:'northwind>Status',
                    formatter: 'MyFormatter.statusText.bind($controller)'
                    }"
                     />
-                </firstStatus>
+                </firstStatus> -->
             </ObjectListItem>
         </items>
     </List>

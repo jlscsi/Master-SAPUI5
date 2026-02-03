@@ -7,6 +7,12 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 import ListBinding from "sap/ui/model/ListBinding";
 import List from "sap/m/List";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
+import ObjectListItem from "sap/m/ObjectListItem";
+import Component from "sap/ui/core/Component";
+import Event from "sap/ui/base/Event";
+import Context from "sap/ui/model/Context";
+import History from "sap/ui/core/History";
+
 /**
  * @namespace com.logaligroup.invoices.controller
  */
@@ -86,4 +92,30 @@ export default class InvoicesList extends Controller {
 
         binding.filter(aFilters);
 }
+      onNavToDetail(event: Event): void  {
+       const item = event.getSource() as ObjectListItem;
+
+       //el context viene gracias al modelo northwind por eso se pone como parametro
+       const bindingContext = item.getBindingContext("northwind") as Context;
+       const path = bindingContext.getPath();
+       console.log(path);
+       console.log( window.encodeURIComponent(path));
+
+    //    console.log(bindingContext.getObject()); Obtiene el objeto completo
+    //    console.log(bindingContext.getPath()); Obtiene la uri o la url de un objeto en especifico
+    //    console.log(bindingContext.getProperty("ProductName")); Obtiene el valor de un campo especifico
+      // Obtener el router desde el componente al cual se puede acceder desde cualquier controlador 
+      const router = (this.getOwnerComponent()as Component).getRouter();
+      // Navegar a la ruta del MainView
+      router.navTo("RouteDetails", {
+        path: window.encodeURIComponent(path)///window.encodeURIComponent permite la codificacion en la url porque hay veces la url pone caracteres raros
+      });
+     
+     
+    //   //otra forma
+    //   var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+    //   // Navegar a la ruta del MainView
+    //   oRouter.navTo("RouteDetails");
+    }
+    
 }

@@ -16,7 +16,7 @@ export default {
         }
 
     },
-     multiComboText: function(this: Controller, statusKey: string): string | undefined{
+    multiComboText: function(this: Controller, statusKey: string): string | undefined{
         const resourceModel = this.getOwnerComponent()?.getModel("i18n") as ResourceModel;
         const resourceBundle = resourceModel?.getResourceBundle() as ResourceBundle;
 
@@ -29,4 +29,5 @@ export default {
             default: return statusKey;
         }
     }
+
 }

@@ -1,6 +1,7 @@
 import BaseComponent from "sap/ui/core/UIComponent";
 import { createDeviceModel } from "./model/models";
 
+
 /**
  * @namespace com.logaligroup.invoice
  */
@@ -22,5 +23,7 @@ export default class Component extends BaseComponent {
 
         // enable routing
         this.getRouter().initialize();
+
+       
 	}
 }
