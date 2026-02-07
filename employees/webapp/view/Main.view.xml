@@ -1,0 +1,71 @@
+<mvc:View controllerName="com.logaligroup.employees.controller.Main"
+    xmlns="sap.m"
+    xmlns:f="sap.f"    
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core"
+    >
+   <f:DynamicPage>
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                        <Title text="{i18n>appTitle}"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader>
+                <fb:FilterBar search=".onFilterSearchPress"
+                    showClearOnFB="true" 
+                    clear=".onClearPress"
+                    >
+                    <fb:filterGroupItems >
+                        <fb:FilterGroupItem groupName="filters" name="employee" visibleInFilterBar="true">
+                            <fb:control>
+                                <Input/>
+                            </fb:control>
+                        </fb:FilterGroupItem>
+                        <fb:FilterGroupItem groupName="filters" name="country" visibleInFilterBar="true">
+                           <fb:control>
+                                <ComboBox items="{countries>/countries}" 
+                                          placeholder="Elige un país" 
+                                          selectionChange=".onCountrySelect">
+                                    <core:Item key="{countries>Code}" text="{countries>Country}"/>                                
+                                </ComboBox>
+                           </fb:control> 
+                        </fb:FilterGroupItem>
+                    </fb:filterGroupItems>
+                </fb:FilterBar>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table  id="employeeTable" items="{employees>/Employees}">            
+               <columns>
+                  <Column >
+                   <Label text="{i18n>ID}"/>
+                  </Column>
+                   <Column >
+                   <Label text="{i18n>country}"/>
+                  </Column>
+                   <Column >
+                   <Label text="{i18n>city}"/>
+                  </Column>
+                   <Column >
+                   <Label text="{i18n>postalCode}"/>
+                  </Column>
+               </columns>
+               <items>
+                 <ColumnListItem >
+                    <cells>
+                        <ObjectIdentifier title="{employees>EmployeeID}" 
+                                          text="{employees>LastName} , {employees>FirstName}"></ObjectIdentifier>
+                        <Text text="{employees>Country}"/>
+                        <Text text="{employees>City}"/>
+                        <Text text="{employees>PostalCode}"/>
+                    </cells>
+                 </ColumnListItem>
+               </items>
+            </Table>
+        </f:content>
+   </f:DynamicPage>
+</mvc:View>
