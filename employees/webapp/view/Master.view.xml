@@ -1,0 +1,113 @@
+<mvc:View
+    controllerName="com.logaligroup.employees.controller.Master"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core"
+>
+    <f:DynamicPage>
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="{i18n>appTitle}" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader>
+                <fb:FilterBar
+                    id="filterBar"
+                    search=".onFilterSearchPress"
+                    showClearOnFB="true"
+                    useToolbar="true"
+                    clear=".onClearPress"
+                    filterContainerWidth="auto"
+                >
+                    <fb:filterGroupItems>
+                        <fb:FilterGroupItem
+                            groupName="filters"
+                            name="employee"
+                            visibleInFilterBar="true"
+                        >
+                            <fb:control>
+                                <Input id="employeeInput" />
+                            </fb:control>
+                        </fb:FilterGroupItem>
+                        <fb:FilterGroupItem
+                            groupName="filters"
+                            name="country"
+                            visibleInFilterBar="true"
+                        >
+                            <fb:control>
+                                <MultiInput
+                                    id="countrySelect"
+                                    placeholder="Seleccione países..."
+                                    showValueHelp="true"
+                                    valueHelpRequest=".onValueHelpRequest"
+                                    showSuggestion="true"
+                                    suggestionItems="{countries>/countries}"
+                                    width="100%"
+                                >
+                                    <core:Item
+                                        key="{countries>Code}"
+                                        text="{countries>Country}"
+                                    />
+                                </MultiInput>
+                            </fb:control>
+                        </fb:FilterGroupItem>
+                    </fb:filterGroupItems>
+                </fb:FilterBar>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table
+                id="employeeTable"
+                items="{employees>/Employees}"
+                updateFinished=".onTableUpdateFinished"
+                
+            >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title id="tableTitle" />
+                        <ToolbarSpacer />
+                        <Button
+                            text="Exportar a Excel"
+                            type="Emphasized"
+                            icon="sap-icon://excel-attachment"
+                            press=".onExportToExcelPress"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column minScreenWidth="Small">
+                        <Label text="{i18n>ID}" />
+                    </Column>
+                    <Column minScreenWidth="Small" demandPopin="true">
+                        <Label text="{i18n>country}" />
+                    </Column>
+                    <Column minScreenWidth="Small" demandPopin="true">
+                        <Label text="{i18n>city}" />
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>postalCode}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onNavToDetails" >
+                        <cells>
+                            <ObjectIdentifier
+                                title="{employees>EmployeeID}"
+                                text="{employees>LastName} , {employees>FirstName}"
+                            />
+                            <Text text="{employees>Country}" />
+                            <Text text="{employees>City}" />
+                            <Text text="{employees>PostalCode}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

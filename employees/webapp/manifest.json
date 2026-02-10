@@ -51,8 +51,16 @@
         "settings": {
           "bundleName": "com.logaligroup.employees.i18n.i18n"
         }
-      }
+      },
+      "countries": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+            "sizeLimit": 500
+        },
+        "uri": "model/Countries.json"
+    }
     },
+    
     "resources": {
       "css": [
         {
@@ -69,23 +77,42 @@
         "type": "View",
         "viewType": "XML",
         "path": "com.logaligroup.employees.view",
-        "async": true,
-        "viewPath": "com.logaligroup.employees.view"
+        "async": true
       },
       "routes": [
         {
-          "name": "RouteMain",
+          "name": "RouteMaster",
           "pattern": ":?query:",
           "target": [
-            "TargetMain"
+            "TargetMaster"
+          ]
+        },
+        {
+          "name":"RouteDetails",
+          "pattern": "Employee({ID})",
+          "target":[
+            "TargetMaster",
+            "TargetDetails"
           ]
         }
       ],
       "targets": {
-        "TargetMain": {
-          "id": "Main",
-          "name": "Main"
+        "TargerContainer":{
+          "name":"Container"
+        },
+        "TargetMaster": {
+          "parent": "TargerContainer",
+          "controlId":"container-fcl",
+          "controlAggregation":"beginColumnPages",
+          "name": "Master"
+        },
+        "TargetDetails":{
+          "name": "Details",
+          "parent": "TargerContainer",
+          "controlId":"container-fcl",
+          "controlAggregation":"midColumnPages"
         }
+
       }
     },
     "rootView": {
