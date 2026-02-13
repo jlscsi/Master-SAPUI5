@@ -17,6 +17,11 @@
                     "OrderID": "1002",
                     "Freight": "25",
                     "ShipAddress": "Calle 1002"
+                },
+                 {
+                    "OrderID": "1003",
+                    "Freight": "120",
+                    "ShipAddress": "Calle 1003"
                 }
             ]
         },

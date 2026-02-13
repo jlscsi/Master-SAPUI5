@@ -2,6 +2,7 @@
     controllerName="com.logaligroup.employees.controller.Details"
     xmlns="sap.m"
     xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
 >
     <uxap:ObjectPageLayout>
@@ -9,13 +10,13 @@
             <uxap:ObjectPageDynamicHeaderTitle>
                 <uxap:expandedHeading>
                     <Title
-                        text="{employees>LastName} , {employees>FirstName} ({employees>EmployeeID})"
+                        text="{northwind>LastName} , {northwind>FirstName} ({northwind>EmployeeID})"
                     />
                 </uxap:expandedHeading>
 
                 <uxap:snappedHeading>
                     <Title
-                        text="{employees>LastName} , ({employees>FirstName} {employees>EmployeeID})"
+                        text="{northwind>LastName} , ({northwind>FirstName} {northwind>EmployeeID})"
                     />
                 </uxap:snappedHeading>
 
@@ -24,19 +25,19 @@
                         <HBox>
                             <VBox>
                                 <Label text="{i18n>country}" />
-                                <Text text="{employees>Country}" />
+                                <Text text="{northwind>Country}" />
                             </VBox>
                         </HBox>
                         <HBox>
                             <VBox>
                                 <Label text="{i18n>city}" />
-                                <Text text="{employees>City}" />
+                                <Text text="{northwind>City}" />
                             </VBox>
                         </HBox>
                         <HBox>
                             <VBox alignItems="End">
                                 <Label text="{i18n>postalCode}" />
-                                <Text text="{employees>PostalCode}" />
+                                <Text text="{northwind>PostalCode}" />
                             </VBox>
                         </HBox>
                     </HBox> -->
@@ -47,7 +48,7 @@
                         <FlexBox>
                             <FlexBox direction="Column">
                                 <Label text="{i18n>country}" />
-                                <Text text="{employees>Country}" />
+                                <Text text="{northwind>Country}" />
                             </FlexBox>
                         </FlexBox>
                         <FlexBox>
@@ -56,7 +57,7 @@
                                 alignItems="Center"
                             >
                                 <Label text="{i18n>city}" />
-                                <Text text="{employees>City}" />
+                                <Text text="{northwind>City}" />
                             </FlexBox>
                         </FlexBox>
                         <FlexBox>
@@ -65,7 +66,7 @@
                                 alignItems="End"
                             >
                                 <Label text="{i18n>postalCode}" />
-                                <Text text="{employees>PostalCode}" />
+                                <Text text="{northwind>PostalCode}" />
                             </FlexBox>
                         </FlexBox>
                     </FlexBox>
@@ -79,7 +80,7 @@
                         <FlexBox>
                             <FlexBox direction="Column">
                                 <Label text="{i18n>country}" />
-                                <Text text="{employees>Country}" />
+                                <Text text="{northwind>Country}" />
                             </FlexBox>
                         </FlexBox>
                         <FlexBox>
@@ -88,7 +89,7 @@
                                 alignItems="Center"
                             >
                                 <Label text="{i18n>city}" />
-                                <Text text="{employees>City}" />
+                                <Text text="{northwind>City}" />
                             </FlexBox>
                         </FlexBox>
                         <FlexBox>
@@ -97,12 +98,20 @@
                                 alignItems="End"
                             >
                                 <Label text="{i18n>postalCode}" />
-                                <Text text="{employees>PostalCode}" />
+                                <Text text="{northwind>PostalCode}" />
                             </FlexBox>
                         </FlexBox>
                     </FlexBox>
                 </uxap:snappedContent>
                 <uxap:actions>
+                    <Button
+                        text="{i18n>create}"
+                        tooltip="{i18n>create}"
+                        press="onCreatePress"
+                        type="Emphasized"
+                        width="6rem"
+                        icon="sap-icon://create"
+                    />
                     <Button
                         icon="sap-icon://decline"
                         press="onClosePress"
@@ -111,7 +120,27 @@
                 </uxap:actions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
-
-        <uxap:sections />
+        <uxap:sections>
+            <uxap:ObjectPageSection>
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>incidences}">
+                        <uxap:blocks>
+                            <Panel id="tableIncidence" />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+             <uxap:ObjectPageSection>
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="{i18n>orders}">
+                        <uxap:blocks>
+                            <core:Fragment
+                                fragmentName="com.logaligroup.employees.fragment.Orders"
+                            />
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
     </uxap:ObjectPageLayout>
 </mvc:View>

@@ -212,13 +212,13 @@ export default class Main extends BaseController {
         //Obtenemos el item del listado de items que generó el evento
         let oItem= oEvent.getSource() as ObjectListItem;
         //Obtenemos el Contexto del item del listado de items que generó el evento, es decir todos los datos EmployeeID, FirstName, etc...    
-        let bindingContext = oItem.getBindingContext("employees") as Context;
+        let bindingContext = oItem.getBindingContext("northwind") as Context;
         //get Property obtiene desde el contexto el dato que se corresponde con la columna EmployeeID    
         let id= bindingContext.getProperty("EmployeeID");
         const oModel = this.getModel("view") as JSONModel;
         oModel.setProperty("/layout","TwoColumnsMidExpanded");
         const oRouter = this.getRouter();
-        oRouter.navTo("RouteDetails",{ID:parseInt(id)-1})
+        oRouter.navTo("RouteDetails",{ID:id})
     }
 
 }

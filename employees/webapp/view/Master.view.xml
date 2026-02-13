@@ -63,7 +63,7 @@
         <f:content>
             <Table
                 id="employeeTable"
-                items="{employees>/Employees}"
+                items="{northwind>/Employees}"
                 updateFinished=".onTableUpdateFinished"
                 
             >
@@ -98,12 +98,12 @@
                     <ColumnListItem type="Navigation" press="onNavToDetails" >
                         <cells>
                             <ObjectIdentifier
-                                title="{employees>EmployeeID}"
-                                text="{employees>LastName} , {employees>FirstName}"
+                                title="{northwind>EmployeeID}"
+                                text="{northwind>LastName} , {northwind>FirstName}"
                             />
-                            <Text text="{employees>Country}" />
-                            <Text text="{employees>City}" />
-                            <Text text="{employees>PostalCode}" />
+                            <Text text="{northwind>Country}" />
+                            <Text text="{northwind>City}" />
+                            <Text text="{northwind>PostalCode}" />
                         </cells>
                     </ColumnListItem>
                 </items>
