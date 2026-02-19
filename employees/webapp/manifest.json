@@ -24,6 +24,15 @@
           "localUri": "localService/mainService/metadata.xml",
           "odataVersion": "2.0"
         }
+      },
+      "YSAPUI5_SRV_01": {
+        "uri": "/sap/opu/odata/sap/YSAPUI5_SRV_01/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/YSAPUI5_SRV_01/metadata.xml",
+          "odataVersion": "2.0"
+        }
       }
     }
   },
@@ -76,6 +85,20 @@
       },
       "northwind": {
         "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "zinvoices": {
+        "dataSource": "YSAPUI5_SRV_01",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "useBatch":false,
+          "defaultUpdateMethod":"PUT"
+        }
+      },
+      "YSAPUI5_SRV_01": {
+        "dataSource": "YSAPUI5_SRV_01",
         "preload": true,
         "settings": {}
       }

@@ -16,8 +16,13 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-            - path: /v2/northwind
-              destination: Northwind           
+          - path: /v2/northwind
+            destination: Northwind
+          - url: http://erp13.sap4practice.com:9037
+            client: '001'
+            authenticationType: BasicAuthentication
+            destination: ERP13
+            path: /sap
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

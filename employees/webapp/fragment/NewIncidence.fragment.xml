@@ -16,11 +16,13 @@
             <HBox>
                 <VBox class="sapUiSmallMarginEnd">
                     <Text text="{i18n>date}:" />
-                    <DatePicker dateValue="{form>CreationDate}" />
+                    <DatePicker dateValue="{form>CreationDate}" 
+                                change="updateIncidenceCreationDate"/>
                 </VBox>
                 <VBox class="sapUiSmallMarginEnd">
                     <Text text="{i18n>reason}:" />
-                    <Input value="{form>Reason}" />
+                    <Input value="{form>Reason}" 
+                           change="updateIncidenceReason"/>
                 </VBox>
                 <VBox class="sapUiSmallMarginEnd">
                     <Text text="{i18n>type}:" />
@@ -29,6 +31,7 @@
                         forceSelection="false"
                         selectedKey="{form>Type}"
                         width="12rem"
+                        change="updateIncidenceType"
                     >
                         <core:Item
                             key="{types>key}"
