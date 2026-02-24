@@ -11,6 +11,8 @@ import ODataListBinding from "sap/ui/model/odata/v2/ODataListBinding";
 import DatePicker, { DatePicker$ChangeEvent } from "sap/m/DatePicker";
 import Select, { Select$ChangeEvent } from "sap/m/Select";
 import { Input$LiveChangeEvent } from "sap/m/Input";
+import Event from "sap/ui/base/Event";
+import ObjectListItem from "sap/m/ObjectListItem";
 /**
  * @namespace com.logaligroup.employees.controller
  */
@@ -132,7 +134,11 @@ export default class Details extends BaseController {
                     CreationDate: oBindingContext?.getProperty("CreationDate"),
                     Type: oBindingContext?.getProperty("Type"),
                     Reason: oBindingContext?.getProperty("Reason"),
-                }
+                },
+                filters : [
+                     new Filter("SapId","EQ",sapId),
+                     new Filter("EmployeeId","EQ",employeeId)
+                ]
             }
             oUtils.crud("create", new JSONModel(object));
         } else {
@@ -149,11 +155,35 @@ export default class Details extends BaseController {
                     TypeX: oBindingContext?.getProperty("TypeX"),
                     Reason: oBindingContext?.getProperty("Reason"),                  
                     ReasonX: oBindingContext?.getProperty("ReasonX"),
-                }
+                },
+                filters : [
+                     new Filter("SapId","EQ",oUtils.getEmail()),
+                     new Filter("EmployeeId","EQ",employeeId)
+                ]
             }
             oUtils.crud("update", new JSONModel(object));
 
         }
+    }
+    public async onDeletePress(event :Button$PressEvent) : Promise<void | ODataListBinding>{
+        const button = event.getSource() as Button;
+        const oBindingContext = button.getBindingContext("form") as Context;
+        const oUtils = new Utils(this);
+
+        const incidenceId = oBindingContext?.getProperty("IncidenceId");
+        const sapId = oUtils.getEmail();
+        const employeeId = oBindingContext?.getProperty("EmployeeId")
+
+        let object = {
+            path:`/IncidentsSet(IncidenceId='${incidenceId}',SapId='${sapId}',EmployeeId='${employeeId}')`,
+            filters : [
+                     new Filter("SapId","EQ",oUtils.getEmail()),
+                     new Filter("EmployeeId","EQ",employeeId)
+                ]
+        };
+
+        const results = await oUtils.crud('delete', new JSONModel(object))
+        this.showIncidents(results);
     }
     public updateIncidenceCreationDate(event: DatePicker$ChangeEvent): void {
         const context = event.getSource().getBindingContext("form") as Context;
@@ -169,5 +199,19 @@ export default class Details extends BaseController {
         const context = event.getSource().getBindingContext("form") as Context;
         let object = context.getObject() as any;
         object.TypeX = true;
+    }
+    public onNavToOrderDetails(event : Event){
+        const item = event.getSource() as ObjectListItem;
+        const oBindingContext = item.getBindingContext("northwind") as Context;
+        const employeeId = oBindingContext.getProperty("EmployeeID");
+        const orderId = oBindingContext.getProperty("OrderID");
+        const view = this.getModel("view") as JSONModel;
+        view.setProperty("/layout","EndColumnFullScreen");
+
+        const router = this.getRouter();
+        router.navTo("RouteOrderDetails",{
+            key:employeeId,
+            key2:orderId
+        })
     }
 }

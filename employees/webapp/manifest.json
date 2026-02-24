@@ -93,8 +93,8 @@
         "preload": true,
         "settings": {
           "defaultBindingMode": "TwoWay",
-          "useBatch":false,
-          "defaultUpdateMethod":"PUT"
+          "useBatch": false,
+          "defaultUpdateMethod": "PUT"
         }
       },
       "YSAPUI5_SRV_01": {
@@ -136,23 +136,38 @@
             "TargetMaster",
             "TargetDetails"
           ]
+        },
+        {
+          "name": "RouteOrderDetails",
+          "pattern": "Employee(ID={key})/Order(ID={key2})",
+          "target": [
+            "TargetMaster",
+            "TargetDetails",
+            "TargetOrderDetails"
+          ]
         }
       ],
       "targets": {
-        "TargerContainer": {
+        "TargetContainer": {
           "name": "Container"
         },
         "TargetMaster": {
-          "parent": "TargerContainer",
+          "parent": "TargetContainer",
           "controlId": "container-fcl",
           "controlAggregation": "beginColumnPages",
           "name": "Master"
         },
         "TargetDetails": {
-          "name": "Details",
-          "parent": "TargerContainer",
+          "parent": "TargetContainer",
           "controlId": "container-fcl",
-          "controlAggregation": "midColumnPages"
+          "controlAggregation": "midColumnPages",
+          "name": "Details"
+        },
+        "TargetOrderDetails": {
+          "parent": "TargetContainer",
+          "controlId": "container-fcl",
+          "controlAggregation": "endColumnPages",
+          "name": "OrderDetails"
         }
       }
     },
