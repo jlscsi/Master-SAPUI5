@@ -1,9 +1,10 @@
-<mvc:View
+<mvc:View xmlns:unified="sap.ui.unified"
     controllerName="com.logaligroup.employees.controller.OrderDetails"
     xmlns="sap.m"
     xmlns:uxap="sap.uxap"
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:upload="sap.m.upload"
     xmlns:sg="com.logaligroup.employees.control"
 >   
     <uxap:ObjectPageLayout>
@@ -123,6 +124,49 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>
             </uxap:ObjectPageSection>
+             <uxap:ObjectPageSection title="{i18n>attachment}">
+              <uxap:subSections>
+                 <uxap:ObjectPageSubSection >
+                    <uxap:blocks>
+                       <upload:UploadSet
+                            id="upload"
+                            uploadUrl="/sap/opu/odata/sap/YSAPUI5_SRV_01/FilesSet/"
+                            beforeUploadStarts="onBeforeUpload"
+                            uploadCompleted="onUploadCompleted"
+                            afterItemRemoved="onAfterRemoved"/>
+                            <!--Lo que esta comentado esta hecho de forma estatica pero no es lo correcto hay que hacerlo de forma dinamica 
+                            en OrderDetails.controller.ts-->
+                           <!-- items="{
+                            path:'zinvoices>/FilesSet',
+                            filters:[
+                                    {
+                                        path:'OrderId',
+                                        operator:'EQ',
+                                        value1:'10258'
+                                    },
+                                    {
+                                        path:'SapId',
+                                        operator:'EQ',
+                                        value1:'c25c385@gmail.com'
+                                    },
+                                    {
+                                        path:'EmployeeId',
+                                        operator:'EQ',
+                                        value1:'1'
+                                    }
+                                ]  
+                            }">
+                            <upload:items>
+                                <upload:UploadSetItem
+                                  fileName="{zinvoices>FileName}"
+                                  mediaType="{zinvoices>MimeType}"
+                                />
+                            </upload:items>
+                        </upload:UploadSet>-->
+                    </uxap:blocks>
+                 </uxap:ObjectPageSubSection>
+              </uxap:subSections>
+             </uxap:ObjectPageSection>
         </uxap:sections>
     </uxap:ObjectPageLayout>
 </mvc:View>
