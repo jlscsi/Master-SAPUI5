@@ -11,7 +11,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
-      "com/logaligroup/employee/*": [
+      "com/logaligroup/employees/*": [
         "./webapp/*"
       ],
       "unit/*": [

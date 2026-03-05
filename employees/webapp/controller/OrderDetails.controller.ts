@@ -178,7 +178,7 @@ export default class OrderDetails extends BaseController {
         const path = context.getPath();
         console.log(path)
         ///sap/opu/odata/sap/YSAPUI5_SRV_01/FilesSet(AttId='0709',OrderId='010258',SapId='c25c385%40gmail.com',EmployeeId='0001')/$value
-        const url=`/sap/opu/odata/sap/YSAPUI5_SRV_01${path}/$value`
+        const url=`/comlogaligroupemployees/sap/opu/odata/sap/YSAPUI5_SRV_01${path}/$value`
         item.setUrl(url);
     }
     public async onAfterRemoved( event: UploadSet$AfterItemRemovedEvent) : Promise<void>{

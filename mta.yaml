@@ -28,12 +28,12 @@ modules:
     build-result: resources
     requires:
     - artifacts:
-      - comlogaligroupemployee.zip
-      name: comlogaligroupemployee
+      - comlogaligroupemployees.zip
+      name: comlogaligroupemployees
       target-path: resources/
-- name: comlogaligroupemployee
+- name: comlogaligroupemployees
   type: html5
-  path: employee
+  path: employees
   build-parameters:
     build-result: dist
     builder: custom

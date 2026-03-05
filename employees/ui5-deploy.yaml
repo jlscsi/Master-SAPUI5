@@ -6,6 +6,8 @@ metadata:
 type: application
 builder:
   customTasks:
+    - name: ui5-tooling-modules-task
+      afterTask: replaceVersion
     - name: ui5-tooling-transpile-task
       afterTask: replaceVersion
       configuration:
@@ -15,7 +17,7 @@ builder:
     - name: ui5-task-zipper
       afterTask: generateCachebusterInfo
       configuration:
-        archiveName: comlogaligroupemployee
+        archiveName: comlogaligroupemployees
         relativePaths: true
         additionalFiles:
           - xs-app.json
